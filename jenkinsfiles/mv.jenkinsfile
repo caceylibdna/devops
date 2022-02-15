@@ -1,0 +1,13 @@
+#!groovy
+pipeline{
+    agent{ node {label "master"}}
+    
+    stages{
+        stage("build"){
+            steps{
+                mavenHome = tool '"M3"
+                sh "${mavenHome}/bin/mvn -v"
+            }
+        }
+    }
+}
