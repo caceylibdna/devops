@@ -5,8 +5,10 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                mavenHome = tool "M3"
-                sh "${mavenHome}/bin/mvn -v"
+	        script{
+                    mavenHome = tool "M3"
+                    sh "${mavenHome}/bin/mvn -v"
+		}    
             }
         }
     }
