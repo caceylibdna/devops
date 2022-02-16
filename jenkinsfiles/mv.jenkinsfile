@@ -1,6 +1,6 @@
 #!groovy
 pipeline{
-    agent{ node {label "master"}}
+    agent{ node {label "main"}}
     
     stages{
         stage("build"){
